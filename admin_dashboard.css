@@ -1,0 +1,239 @@
+/* Reset & global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f8fa;
+  color: #333;
+  height: 100vh;
+  display: flex; 
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+.logout {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout:hover {
+  background-color: #a30000;
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: flex;
+    flex: 1;
+    margin-top: 0.1px; /* Add margin to account for the header height */
+}
+
+/* Sidebar */
+.sidebar {
+    position: relative; /* Position the sidebar below the header */
+    top: 0;
+    width: 300px;
+    height: calc(100vh - 0.1px); /* Subtract the height of the header */
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto; /* Add scrolling for the sidebar if content overflows */
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #333;
+}
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto; /* Enable scrolling for the main content */
+    height: calc(100vh - 0.1px); /* Subtract the height of the header */
+    word-wrap: break-word; /* Ensures long words or text wrap to the next line */
+    word-break: break-word; /* Breaks long words if necessary */
+}
+
+.main-content h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  color: #555;
+   word-wrap: break-word; /* Ensures long words or text wrap to the next line */
+    word-break: break-word; /* Breaks long words if necessary */
+    overflow-wrap: break-word; /* Ensures proper wrapping for long text */
+    line-height: 1.6; /* Improves readability by adding spacing between lines */
+
+}
+
+.cards {
+    background: #fff; /* White background for the card */
+    color: #333; /* Dark text color for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a card effect */
+    padding: 20px; /* Padding inside the card */
+    margin-top: 20px; /* Space above the card */
+    max-width: 1200px; /* Optional: Limit the card's width */
+    margin-left: auto; /* Center the card horizontally */
+    margin-right: auto; /* Center the card horizontally */
+    line-height: 1.6; /* Improve readability */
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff 80%, #e0e7ff 100%);
+  padding: 28px 20px 24px 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,85,170,0.08), 0 1.5px 6px rgba(0,0,0,0.03);
+  text-align: center;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #0055aa33 60%, transparent 100%);
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.card h3 {
+  color: #003366;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card p {
+  color: #444;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #0055aa 60%, #003366 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 12px rgba(0,85,170,0.10);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.card a:hover, .card a:focus {
+  background: linear-gradient(90deg, #003366 60%, #0055aa 100%);
+  transform: scale(1.07);
+  box-shadow: 0 6px 24px rgba(0,85,170,0.15);
+}
+
+.card:hover, .card:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0,85,170,0.14), 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar nav ul li {
+    margin: 0;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
+
+footer {
+  text-align: center;
+  background: linear-gradient(90deg, #003366 60%, #0055aa 100%);
+  color: white;
+  padding: 18px 0;
+  position: relative; /* Footer will appear at the bottom of the content */
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.04);
+  z-index: 3;
+  margin-top: 20px; /* Add spacing between the footer and the content */
+}

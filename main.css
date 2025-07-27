@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: #f4f4f4;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #003366;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .login {
+    display: flex;
+    align-items: center;
+}
+
+header .login-btn {
+    text-decoration: none;
+    color: white;
+    background: #ff4d4d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+header .login-btn:hover {
+    background: #ff1a1a;
+}
+
+/* Main Section */
+main {
+    height: calc(100vh - 120px); /* Adjust height to exclude header and footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/background.png') no-repeat center center/cover;
+    text-align: center;
+}
+
+main .quote h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #003366;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}

@@ -1,0 +1,162 @@
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0f2f5 100%);
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px 0 16px 32px;
+  background: linear-gradient(90deg, #003366 60%, #0055aa 100%);
+}
+
+.logo img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(0,85,170,0.95);
+  margin: 0;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background: linear-gradient(90deg, #0055aa 60%, #003366 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,85,170,0.08);
+}
+
+main {
+  padding: 40px 20px 80px 20px;
+  min-height: 80vh;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  animation: fadeInUp 1.2s;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff 80%, #e0e7ff 100%);
+  padding: 28px 20px 24px 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,85,170,0.08), 0 1.5px 6px rgba(0,0,0,0.03);
+  text-align: center;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #0055aa33 60%, transparent 100%);
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.card h3 {
+  color: #003366;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card p {
+  color: #444;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #0055aa 60%, #003366 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 12px rgba(0,85,170,0.10);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.card a:hover, .card a:focus {
+  background: linear-gradient(90deg, #003366 60%, #0055aa 100%);
+  transform: scale(1.07);
+  box-shadow: 0 6px 24px rgba(0,85,170,0.15);
+}
+
+.card:hover, .card:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0,85,170,0.14), 0 2px 8px rgba(0,0,0,0.04);
+}
+
+footer {
+  text-align: center;
+  background: linear-gradient(90deg, #003366 60%, #0055aa 100%);
+  color: white;
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+  z-index: 3;
+}
+
