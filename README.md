@@ -1,7 +1,7 @@
 # Visitor_Gate_Pass_System
 A Web-Based Visitor Gate Pass Management System developed as part of a vocational training project at BHEL Jhansi. The system provides a secure, role-based digital interface for managing, tracking, and verifying visitor entries within an industrial premises.
 
-🔧 Technologies Used
+# 🔧 Technologies Used
 Frontend: HTML, CSS, JavaScript
 
 Backend: PHP
